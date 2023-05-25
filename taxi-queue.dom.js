@@ -25,25 +25,29 @@ if (localStorage["passengerCount"]) {
 }
 
 if (localStorage["taxiCount"]) {
-    // ensure counter is a number and set it to the innerHTML
-    taxiQueueCount.innerHTML = localStorage["taxiCount"];
-  }
+  // ensure counter is a number and set it to the innerHTML
+  taxiQueueCount.innerHTML = localStorage["taxiCount"];
+}
 
 function btnJoinQueue_onCLick() {
-  localStorage['passengerCount'] = taxiQueue.joinQueue();
+  localStorage["passengerCount"] = taxiQueue.joinQueue();
   passengerQueueCount.innerHTML = taxiQueue.queueLength();
 }
 
 function btnLeaveQueue_onCLick() {
-  localStorage['passengerCount'] = taxiQueue.leaveQueue();
+  localStorage["passengerCount"] = taxiQueue.leaveQueue();
   passengerQueueCount.innerHTML = taxiQueue.queueLength();
 }
 
 function btnJoinTaxiQueue_onClick() {
-    localStorage["taxiCount"] = taxiQueue.joinTaxiQueue();
-    taxiQueueCount.innerHTML = taxiQueue.taxiQueueLength();
+  localStorage["taxiCount"] = taxiQueue.joinTaxiQueue();
+  taxiQueueCount.innerHTML = taxiQueue.taxiQueueLength();
 }
 
 function btnDepart_onClick() {
-
+  //taxiQueue.taxiDepart();
+  localStorage["taxiCount"] = taxiQueue.taxiQueueLength();
+  localStorage["passengerCount"] = taxiQueue.queueLength();
+  taxiQueueCount.innerHTML = taxiQueue.taxiQueueLength();
+  passengerQueueCount.innerHTML = taxiQueue.queueLength();
 }

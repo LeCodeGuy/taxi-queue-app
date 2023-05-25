@@ -37,7 +37,7 @@ function TaxiQueue() {
 			taxiQueueCount--
 			passengerQueueCount -= 12;
 		}
-		return taxiQueueCount;
+		return {taxiQueueCount, passengerQueueCount};
 	}
 
 	return {
