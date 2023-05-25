@@ -33,7 +33,7 @@ function TaxiQueue() {
 	}
 
 	function taxiDepart(){
-		if(passengerQueueCount > 12 && taxiQueueCount > 1){
+		if(passengerQueueCount > 11 && taxiQueueCount > 0){
 			taxiQueueCount--
 			passengerQueueCount -= 12;
 		}

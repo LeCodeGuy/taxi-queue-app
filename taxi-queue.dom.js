@@ -45,7 +45,7 @@ function btnJoinTaxiQueue_onClick() {
 }
 
 function btnDepart_onClick() {
-  //taxiQueue.taxiDepart();
+  taxiQueue.taxiDepart();
   localStorage["taxiCount"] = taxiQueue.taxiQueueLength();
   localStorage["passengerCount"] = taxiQueue.queueLength();
   taxiQueueCount.innerHTML = taxiQueue.taxiQueueLength();
